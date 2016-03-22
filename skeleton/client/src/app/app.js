@@ -9,9 +9,9 @@
     $urlRouterProvider.otherwise('/');
     $logProvider.debugEnabled(true);
 
-    BackandProvider.setAppName('eduh1');
+    BackandProvider.setAppName('coursemanagerwebinar');
     //BackandProvider.setSignUpToken('0b9bf00e-31f8-4d49-932b-ae0f687bd2d7');
-    BackandProvider.setAnonymousToken('557c10bf-d75a-440e-8281-66712c528be4');
+    BackandProvider.setAnonymousToken('600f494f-6f56-4f42-b8f7-fe9c3ac15982');
 
     //BackandProvider.setAppName('-Your App Name --');
     //BackandProvider.setAnonymousToken('Your Anonymous Token');
