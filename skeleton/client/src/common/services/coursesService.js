@@ -53,6 +53,10 @@
       return $http.delete(getUrlForId(objectId));
     }
 
+    //return all tasks for specific course
+    function getTasks(courseId){
+      return $http.get(getUrl() + '/' + courseId + '/tasks');
+    }
 
   }
 
