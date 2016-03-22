@@ -2,16 +2,12 @@
   'use strict';
 
   angular
-    .module('app')
-    .config(config)
-    .controller('CoursesCtrl',['CoursesService', 'coursesList', CoursesCtrl]);
+      .module('app')
+      .config(config)
+      .controller('CoursesCtrl', ['CoursesService', 'coursesList', CoursesCtrl]);
 
-  /**
-   * @name  config
-   * @description config block
-   */
   function config($stateProvider) {
-     $stateProvider
+    $stateProvider
       .state('root.courses', {
         url: '/courses',
         views: {
@@ -28,12 +24,12 @@
         }
       })
   }
-
   /**
-   * @name  CoursesCtrl
+   * @name  CoursesController
    * @description Controller
    */
-  function CoursesCtrl(CoursesService, coursesList) {
+  function CoursesCtrl (CoursesService, coursesList){
+
     var vm = this;
     vm.courses = null;
     vm.loading = [];
@@ -87,8 +83,8 @@
           // alert
           console.log(reason);
         });
-    };
-  }
+    }
 
+  }
 
 })();

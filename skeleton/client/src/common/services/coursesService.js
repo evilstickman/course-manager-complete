@@ -12,7 +12,8 @@
       list: list,
       create: create,
       update: update,
-      destroy: destroy
+      destroy: destroy,
+      getTasks: getTasks
 
     };
     return factory;
@@ -55,9 +56,14 @@
 
     //return all tasks for specific course
     function getTasks(courseId){
-      return $http.get(getUrl() + '/' + courseId + '/tasks');
+      return $http.get(getUrl() + '/' + courseId + '/tasks').then(
+        function(tasks){
+          tasks.data.data.forEach(function(task){
+            task.dueDate = new Date(task.dueDate);
+          })
+          return tasks;
+        });
+      };
     }
-
-  }
 
 })();

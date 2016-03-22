@@ -59,15 +59,14 @@
                        ng-blur="vm.updateCourse(course, $index)"
                        placeholder="Course description."></textarea>
                 </div>
-                <!--<button
+                <button
                       type="submit"
                       class="btn btn-default btn-board"
                       ui-sref="root.tasks({courseId: course.id})">Tasks >>
-                </button>-->
-                <br>
-                <div>Tasks:</div>
-                <div>{{course.task1}}</div>
-                <div>{{course.task2}}</div>
+                </button>
+                <!--<div>Tasks:</div>-->
+                <!--<div>{{course.task1}}</div>-->
+                <!--<div>{{course.task2}}</div>-->
                 <span ng-show="vm.loading[$index]" class="glyphicon glyphicon-refresh"></span>
             </div>
         </div>
