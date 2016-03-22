@@ -3,9 +3,9 @@
 
   angular
       .module('common.services.data',[])
-      .factory('DataService', ['$http', 'Backand', DataService]);
+      .factory('CoursesService', ['$http', 'Backand', CoursesService]);
 
-  function DataService($http, Backand) {
+  function CoursesService($http, Backand) {
 
     var factory = {
       get: get,
