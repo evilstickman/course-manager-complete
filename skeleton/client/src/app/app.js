@@ -6,7 +6,7 @@
   });
 
   function config(BackandProvider, $stateProvider, $urlRouterProvider, $logProvider, $httpProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/courses');
     $logProvider.debugEnabled(true);
 
     BackandProvider.setAppName('coursemanagerwebinar');
@@ -54,7 +54,7 @@
       'common.services.data',
       'common.directives.version',
       'common.filters.uppercase',
-      'common.interceptors.http'
+      'common.interceptors.http',
     ])
     .config(config)
     .run(run)
